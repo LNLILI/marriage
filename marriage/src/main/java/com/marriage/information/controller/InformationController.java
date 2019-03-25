@@ -133,7 +133,7 @@ public class InformationController {
 		
 		return 0;
 	}
-	
+	//通过ID查询女性信息
 	@RequestMapping(value="/selectWomanInformationById",method=RequestMethod.GET)//TODO  post
 	@ResponseBody
 	public Map<String, Object>  userSelectById(@RequestParam Map<String,Object> map){
