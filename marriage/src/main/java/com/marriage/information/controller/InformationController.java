@@ -133,24 +133,5 @@ public class InformationController {
 		
 		return 0;
 	}
-	//通过ID查询女性信息
-	@RequestMapping(value="/selectWomanInformationById",method=RequestMethod.GET)//TODO  post
-	@ResponseBody
-	public Map<String, Object>  userSelectById(@RequestParam Map<String,Object> map){
-		WomanInformation  womanInformation = null;
-		Map<String, Object> replyMap = new HashMap<String,Object>();
-		if (map.containsKey("userId") ) {
-			womanInformation = informationService.selectWomanInformationById(map);
-		}
-		if(womanInformation != null){
-			replyMap.put("code", "200");
-			replyMap.put("state", "success");
-			replyMap.put("user", womanInformation);
-		}else{
-			replyMap.put("code", "500");
-			replyMap.put("state", "error");
-		}
-		return replyMap;
-	}
 	
 }

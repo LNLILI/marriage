@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.marriage.user.entity.ManInformation;
-import com.marriage.user.entity.User;
 
 public interface NewsDao {
 
@@ -21,7 +20,5 @@ public interface NewsDao {
 	List<ManInformation> selectNewsTopIndex(Map<String, Object> map);
 
 	List<ManInformation> selectNewsById(Map<String, Object> map);
-	
-
 
 }

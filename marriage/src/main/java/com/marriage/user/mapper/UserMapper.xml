@@ -125,10 +125,7 @@
 		 
 	where us.del_flag = 0 
 		  and us.activation = 0 or us.activation = 1 
-		  <!-- <if test="#{maxPoint} != null">
-    		and m.member_points_top  &lt; #{maxPoint}
-    	</if> -->
-
+		 
 	order by us.user_id desc
 
 	
@@ -318,12 +315,6 @@
 	INSERT INTO USER (user_name,`password`,user_character)
  	VALUES( #{userName} ,#{password},1)
 </insert>
-
-<!-- 通过ID查询详情信息 -->
-<select id="userSelectById" parameterType="map" resultType="com.marriage.user.entity.User">
-	SELECT  * FROM USER WHERE	del_flag  =  '0'  AND	user_character = '1' AND	user_id = #{userId}
-</select>
-
 
 
 

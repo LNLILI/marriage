@@ -104,20 +104,6 @@ hope_male_height_weight,hope_male_marriage_history,hope_male_child,hope_male_edu
 	
 </select>
 
-<!-- 通过ID查询女性详细信息 -->
-<select id="selectWomanInformationById" resultType="com.marriage.information.entity.WomanInformation" parameterType="map">
-
-	select  *
-	
-	from woman_information
-	
-	where country = #{country}
-	 
-	
-	AND woman_id =#{womanId}
-
-</select>
-
 
 <update id="updateWomanInformationByWomanId">
 	update woman_information

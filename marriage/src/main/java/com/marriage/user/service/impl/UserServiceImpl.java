@@ -261,12 +261,4 @@ public class UserServiceImpl implements UserService {
 		// TODO Auto-generated method stub
 		return userDao.selectManInformationByTotal(map);
 	}
-	
-	
-	//通过ID查询详情页
-		@Override
-		public User userSelectById(Map<String, Object> map) {
-			// TODO Auto-generated method stub
-			return userDao.userSelectById(map);
-		}
 }

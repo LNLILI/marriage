@@ -17,8 +17,5 @@ public interface InformationDao {
 	Integer updateWomanDelFlagByIds(Map<String, Object> map);
 
 	Integer selectWomanInformationByTotal(Map<String, Object> map);
-	
-	//通过ID查询女性详情
-	WomanInformation selectWomanInformationById(Map<String, Object> map);
 
 }
