@@ -1,0 +1,27 @@
+package com.marriage.news.dao;
+
+import java.util.List;
+import java.util.Map;
+
+import com.marriage.user.entity.ManInformation;
+import com.marriage.user.entity.User;
+
+public interface NewsDao {
+
+	Integer insertNews(Map<String, Object> map);
+
+	List<ManInformation> selectNewsByPage(Map<String, Object> map);
+	
+	Integer selectNewsByPageTotal(Map<String, Object> map);
+
+	Integer updateNewsByNewsId(Map<String, Object> map);
+
+	Integer updateNewsDelFlagById(Map<String, Object> map);
+
+	List<ManInformation> selectNewsTopIndex(Map<String, Object> map);
+
+	List<ManInformation> selectNewsById(Map<String, Object> map);
+	
+
+
+}
