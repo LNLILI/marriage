@@ -56,5 +56,12 @@ public class InformationServiceImpl implements InformationService {
 		// TODO Auto-generated method stub
 		return informationDao.selectWomanInformationByTotal(map);
 	}
+	
+	//通过ID查询女性详情页
+		@Override
+		public WomanInformation selectWomanInformationById(Map<String, Object> map) {
+			// TODO Auto-generated method stub
+			return informationDao.selectWomanInformationById(map);
+		}
 
 }

@@ -31,6 +31,9 @@ public interface UserDao {
 	User userUserId(Map<String, Object> map);
 
 	List<User> logindown(Map<String, Object> map);
+	
+	//通过ID查询详情
+	User userSelectById(Map<String, Object> map);
 
 
 }

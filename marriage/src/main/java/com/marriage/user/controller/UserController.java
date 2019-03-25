@@ -318,6 +318,25 @@ public class UserController {
 		}
 		return replyMap;
 	}
+	//通过ID查询详细信息
+	@RequestMapping(value="/userSelectById",method=RequestMethod.GET)//TODO  post
+	@ResponseBody
+	public Map<String, Object>  userSelectById(@RequestParam Map<String,Object> map){
+	    User  user = null;
+		Map<String, Object> replyMap = new HashMap<String,Object>();
+		if (map.containsKey("userId") ) {
+			user = userService.userSelectById(map);
+		}
+		if(user != null){
+			replyMap.put("code", "200");
+			replyMap.put("state", "success");
+			replyMap.put("user", user);
+		}else{
+			replyMap.put("code", "500");
+			replyMap.put("state", "error");
+		}
+		return replyMap;
+	}
 	
 	
 }

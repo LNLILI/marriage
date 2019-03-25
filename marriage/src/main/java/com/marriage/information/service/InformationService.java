@@ -17,5 +17,8 @@ public interface InformationService {
 	Integer deleteWomanById(Map<String, Object> map);
 
 	Integer selectWomanInformationByTotal(Map<String, Object> map);
+	
+	//通过ID查询女性详情
+    WomanInformation selectWomanInformationById(Map<String, Object> map);
 
 }
